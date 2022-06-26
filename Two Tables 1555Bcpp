@@ -1,7 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+ 
 int main() {
+    ios::sync_with_stdio(0), cin.tie(0);
 	// your code goes here
 	int t; cin>> t;
 	while(t--){
@@ -15,8 +16,8 @@ int main() {
 	    int w1 = x2 - x1;
 	    int h1 = y2 - y1;
 	    
-	    if(w1 + w2 > W || h1+h2 > H){
-	        cout<<-1;
+	    if(w1 + w2 > W && h1+h2 > H){
+	        cout<<-1<<"\n";
 	    }else{
 	        int w_cost =  numeric_limits<int>:: max();
 	        int h_cost =  numeric_limits<int>:: max();
@@ -31,9 +32,7 @@ int main() {
 	           
 	        }
 	        cout<<min(w_cost,h_cost)<<"\n";
-	        
 	    }
 	}
-	
-	
+	return 0;
 }
